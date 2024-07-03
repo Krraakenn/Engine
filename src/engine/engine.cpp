@@ -10,13 +10,6 @@ Engine::Engine()
   m_Window.create(VideoMode(resolution.x, resolution.y),
                   "Simple Game Engine",
                   Style::Default);
-
-  // Load the background into the texture
-  // Be sure to scale this image to your screen size
-  // m_BackgroundTexture.loadFromFile("../assets/background.jpg");
-
-  // // Associate the sprite with the texture
-  // m_BackgroundSprite.setTexture(m_BackgroundTexture);
 }
 
 void Engine::start()
@@ -40,11 +33,7 @@ void Engine::start()
 void Engine::draw()
 {
   // Rub out the last frame
-  m_Window.clear(Color::White);
-
-  // Draw the background
-  m_Window.draw(m_BackgroundSprite);
-  // m_Window.draw(m_Bob.getSprite());
+  m_Window.clear(color.Black);
 
   // Show everything we have just drawn
   m_Window.display();

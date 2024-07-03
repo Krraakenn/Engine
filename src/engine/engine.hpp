@@ -9,6 +9,8 @@ private:
   // A regular RenderWindow
   RenderWindow m_Window;
 
+  Color color;
+
   // Declare a sprite and a Texture for the background
   Sprite m_BackgroundSprite;
   Texture m_BackgroundTexture;

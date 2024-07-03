@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
 
 # Project name
-project(Engine)
+project(Krraakenn-Engine)
 
 # Set C++ standard
 set(CMAKE_CXX_STANDARD 17)
@@ -13,7 +13,8 @@ find_package(SFML 2.5.1 COMPONENTS graphics window system REQUIRED)
 # Add sources files
 set(SOURCES
   src/main.cpp
-  src/engine.cpp
+  src/engine/engine.cpp
+  src/button/button.cpp
 )
 
 # Add include directories
