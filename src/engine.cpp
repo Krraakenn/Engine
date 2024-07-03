@@ -1,4 +1,4 @@
-#include "Engine.h"
+#include "engine.hpp"
 
 Engine::Engine()
 {
@@ -9,14 +9,14 @@ Engine::Engine()
 
   m_Window.create(VideoMode(resolution.x, resolution.y),
                   "Simple Game Engine",
-                  Style::Fullscreen);
+                  Style::Default);
 
   // Load the background into the texture
   // Be sure to scale this image to your screen size
-  m_BackgroundTexture.loadFromFile("background.jpg");
+  // m_BackgroundTexture.loadFromFile("../assets/background.jpg");
 
-  // Associate the sprite with the texture
-  m_BackgroundSprite.setTexture(m_BackgroundTexture);
+  // // Associate the sprite with the texture
+  // m_BackgroundSprite.setTexture(m_BackgroundTexture);
 }
 
 void Engine::start()
@@ -26,14 +26,26 @@ void Engine::start()
 
   while (m_Window.isOpen())
   {
-    // Restart the clock and save the elapsed time into dt
-    Time dt = clock.restart();
+    sf::Event event;
+    while (m_Window.pollEvent(event))
+    {
+      if (event.type == sf::Event::Closed)
+        m_Window.close();
+    }
 
-    // Make a fraction from the delta time
-    float dtAsSeconds = dt.asSeconds();
-
-    input();
-    update(dtAsSeconds);
     draw();
   }
+}
+
+void Engine::draw()
+{
+  // Rub out the last frame
+  m_Window.clear(Color::White);
+
+  // Draw the background
+  m_Window.draw(m_BackgroundSprite);
+  // m_Window.draw(m_Bob.getSprite());
+
+  // Show everything we have just drawn
+  m_Window.display();
 }
