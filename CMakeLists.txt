@@ -8,12 +8,12 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # Find SFML
-find_package(SFML 2.6.1 COMPONENTS graphics window system REQUIRED)
+find_package(SFML 2.5.1 COMPONENTS graphics window system REQUIRED)
 
 # Add sources files
 set(SOURCES
-    src/main.cpp
-    src/engine.cpp
+  src/main.cpp
+  src/engine.cpp
 )
 
 # Add include directories
