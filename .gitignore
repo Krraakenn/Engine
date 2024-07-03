@@ -34,6 +34,9 @@
 .vscode/settings.json
 Engine
 
+# Build
+build
+
 # CMake files
 CMakeCache.txt
 CMakeFiles
