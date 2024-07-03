@@ -33,3 +33,13 @@
 .vscode/c_cpp_properties.json
 .vscode/settings.json
 Engine
+
+# Build
+build
+
+# CMake files
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+cmake_install.cmake
+Makefile
