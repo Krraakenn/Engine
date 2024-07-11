@@ -1,5 +1,8 @@
 #include <stdint.h>
 
+// unsigned integers mean that they can only be positive or null
+// signed integers mean that they can be both positive and negative ranges
+
 // unsigned integers
 using u64 = uint64_t;
 using u32 = uint32_t;
