@@ -26,6 +26,13 @@
 *.a
 *.lib
 
+# Cmake
+CMakeFiles
+CMakeCache.txt
+CMakeScripts
+build
+cmake_install.cmake
+
 # Executables
 *.exe
 *.out
